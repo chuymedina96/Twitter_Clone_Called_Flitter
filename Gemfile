@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+#Devis gem for user account!
+gem 'devise'
 #For Twitter UI components inc. navbar
 gem 'bootstrap-sass', '~> 3.3.6'
 
