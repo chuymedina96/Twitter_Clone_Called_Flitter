@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'fdf/fhdfrejwh'
+
+  get 'fdf/sf'
+
+  get 'fdf/fe'
+
+  get 'fdf/uewewfewhnfdfudsufds'
+
   devise_for :users
   #Define Routes for pages
 root 'pages#index'
