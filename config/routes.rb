@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'fdf/uewewfewhnfdfudsufds'
 
   devise_for :users
+  resources :posts
   #Define Routes for pages
 root 'pages#index'
   
