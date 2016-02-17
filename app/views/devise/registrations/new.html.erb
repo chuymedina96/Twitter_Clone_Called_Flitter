@@ -15,32 +15,6 @@
             background-size: cover;
             
         }
-        h1 {
-            color: white;
-            font-weight: 800;
-            
-        }
-        .container-index{
-            margin-right: 15%;
-            margin-left: 15%;
-        }
-        .text{
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        .footer-links {
-            text-align: center;
-            color: white;
-            font-weight: 500;
-            margin-top: 30%;
-            font-size: 75%;
-        }
-        .log-in {
-            float: right;
-            width:250px;
-            height: 250px;
-        }
     </style>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
