@@ -1,5 +1,47 @@
-<h2>Sign up</h2>
-
+<div class="container">
+<h2 class="sign-up">Sign up</h2>
+<div class="center-everything">
+   <style>
+        body {
+            background: 
+            linear-gradient(
+            rgba(0,0,0, 0.7),
+            rgba(0,0,0, 0.7)
+            ),
+            url("/bg.jpg") no-repeat center center fixed; /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
+            -webkit-background-size: cover;
+            -moz-background-szie: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        }
+        h1 {
+            color: white;
+            font-weight: 800;
+            
+        }
+        .container-index{
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        .text{
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .footer-links {
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            margin-top: 30%;
+            font-size: 75%;
+        }
+        .log-in {
+            float: right;
+            width:250px;
+            height: 250px;
+        }
+    </style>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
@@ -32,3 +74,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
