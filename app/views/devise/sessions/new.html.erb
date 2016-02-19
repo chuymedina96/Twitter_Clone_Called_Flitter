@@ -1,4 +1,21 @@
-<h2>Log in</h2>
+<div class="container">
+<h2 class="sign-up">Log in</h2>
+<div class="center-everything">
+ <style>
+        body {
+            background: 
+            linear-gradient(
+            rgba(0,0,0, 0.7),
+            rgba(0,0,0, 0.7)
+            ),
+            url("/bg.jpg") no-repeat center center fixed; /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
+            -webkit-background-size: cover;
+            -moz-background-szie: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        }
+    </style>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -24,3 +41,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
