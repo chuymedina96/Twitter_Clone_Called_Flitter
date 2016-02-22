@@ -8,7 +8,7 @@ class PostsController < ApplicationController
             @post.user_id = current_user.id
             respond_to do |f|
                 if (@post.save)
-                    f.html { redirect_to "", notice: "Post created!" }
+                    f.html { redirect_to "", notice: "Post created succesfully!" }
                 else
                     f.html { redirect_to "", notice: "Error: Post Not Saved" }
                 end
