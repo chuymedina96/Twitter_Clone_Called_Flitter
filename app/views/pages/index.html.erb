@@ -34,13 +34,20 @@
             text-align: center;
             color: white;
             font-weight: 500;
-            margin-top: 30%;
+            margin-top: 22%;
             font-size: 75%;
         }
         .log-in {
             float: right;
-            width:250px;
-            height: 250px;
+            margin-top: 7.5%;
+            width:300px;
+            height: 100px;
+        }
+        .sign-up {
+            float: right;
+            width:300px;
+            height: 220px;
+            color: black;
         }
     </style>
     <div class="container-index row"> 
@@ -54,13 +61,18 @@
     </div>
     <div class="col-sm-6">
         <div class="log-in panel">
-            
+            <p>Log in</p>
         </div>
-    
+        <div class="sign-up panel">
+             <p>Sign up</p>
+        </div>
     </div>
     <div class="col-sm-12">
         <p class="footer-links">About  Help  Blog  Status  Jobs  Trends  Privacy  Cookies  Ads  Info  Brand  Advertise  Business  Media  Developers  Directory  @2016 Flutter</p>
     </div>
     </div>
 <% else # if user is signed in, render the following %>
+
+<script>document.location = "/home"</script>
+
 <% end %>

@@ -11,14 +11,27 @@
         </div>
     </div>
 </div>
+
 <div class="col-xs-6">
+    <%= render '/components/post_form' %><br><br>
     <% for @p in @posts %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-            <p><%= @p.content %></p>
+    <div class="panel panel-default post-panel">
+      <div class="panel-body row">
+          
+          <div class="col-sm-1">
+              <img src="/public/menbae.jpg"
+          </div>
+          <div class="col-sm-11">
+              <p><%= @p.content %></p>
+          </div>
+          <div class="col-sm-12">
+              LINKS
+          </div>
+        
         </div>
     </div>
     <% end %>
+    
 </div>
 <div class="col-xs-3">
     <div class="panel panel-default">
