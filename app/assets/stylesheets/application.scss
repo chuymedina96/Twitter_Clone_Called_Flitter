@@ -32,8 +32,35 @@ body {
 .button-style{
     height: 40px;
 }
-.post-panel{
+.rounded-img{
+    border-radius: 6%;
+}
+.post-panel {
     margin-top: -21px;
+    
+}
+.post-title{
+    text-align: left;
+    margin-left: 15px;
+}
+.post-content{
+    text-align: left;
+    margin-left: 15px;
+}
+.post-links{
+    text-align: left;
+}
+.post-owner{
+    color: black;
+    font-weight: bold;
+}
+.post-creation{
+    opacity: 65%;
+}
+.g-links {
+    opacity: .6;
+    font-size: 120%;
+    margin-right: 75px;
     
 }
 
