@@ -75,6 +75,7 @@ body {
     overflow: hidden;
 }
 .panel-image ~ .panel-footer a {
+    background-color: white;
     padding: 0px 10px;
     font-size: 1.3em;
     color: rgb(100, 100, 100);
@@ -94,5 +95,8 @@ body {
 
 .post-form-panel{
     margin-bottom: -21px;
+}
+.home-img{
+    margin-bottom: 25px;
 }
 
