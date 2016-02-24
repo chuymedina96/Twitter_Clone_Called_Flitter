@@ -43,7 +43,7 @@
                   <img src="/menbae.jpg" class="rounded-img" height="50px" width="50px"></img>
               </div>
               <div class="col-sm-11">
-                  <p class="post-title"><span class="post-owner"><%= User.find(@p.user.id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s %></p>
+                  <p class="post-title"><span class="post-owner"><%= User.find(@p.user.id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></p>
                   <p class="post-content"><%= @p.content %></p>
               </div>
               <div class="col-sm-12">

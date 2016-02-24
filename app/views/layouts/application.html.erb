@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flitterv2</title>
+  <title>Flutter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render '/layouts/nav' %>
+        
+  
+<% if params[:id] != nil %>
+<% @url = '/user/' + params[:id]  %>
+<% if current_page?(@url) %>
+ <img src="/space.jpg" class="profile-banner"></img>
+ <div class="row">
+     <div class="col-sm-12" style="backgrond-color: white;">
+         <div class="container">
+             <div class="col-sm-3">
+                 &nbsp;
+             </div>
+             <div class="col-sm-6">
+                <div class="col-sm-2">POSTS<br>
+                     <h6 style="color: #55acee; font-size: 150%">16</h6>
+                </div>
+                <div class="col-sm-2">Followers<br>
+                     <h6 style="color: #55acee; font-size: 150%">15</h6>
+                </div>
+            </div>
+         </div>
+     </div>
+ </div>
+ <%end%>
+ <%end%>
 <div class="container">
        <spam class="notice"><%= notice %></spam>
        <spam class="alert"><%= alert %></spam>
