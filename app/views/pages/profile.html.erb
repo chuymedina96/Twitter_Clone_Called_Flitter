@@ -1,10 +1,12 @@
 
 <div class="row">
 <div class="col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p>Profile pic and stuff</p>
-        </div>
+    <div class="col-sm-12" style="margin-top: -200px">
+        <img src="/menbae.jpg" height="200px;" width= "200px;"></img>
+    </div>
+     <div class="col-sm-12">
+        <h3 style="font-weight: bold;"><%= params[:id] %></h3>
+        <p>Maker, Tinkerer, Techie, entrepreneur</p>
     </div>
 </div>
 <div class="col-xs-6">
@@ -36,7 +38,7 @@
     <div class="col-sm-12">
                 <center>
                     <img src="/icon.png" height= "25px" width= "25px"></img>
-                    <a href="#top"><p class="opacity: .7">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a>
+                    <a href="#top"><p class="opacity: .7;">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a>
                 </center>
               </div>
     </div>
@@ -45,12 +47,21 @@
 <div class="col-xs-3">
     <div class="panel panel-default">
          <div class="panel-body">
-            <p>Who to follow</p>
+            <p style="font-weight: bold; opacity: .7; font-size: 20px;">Who to follow</p>
+            <% for @u in @toFollow do %>
+            <p style="font-weight: bold; opacity: 0.85;"><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
+            <% end %>
         </div>
     </div>
     <div class="panel panel-default">
              <div class="panel-body">
-                <p>Trends</p>
+                <h5 style="color: grey; font-size: 125%">Trends</h5>
+                <a href="">#Trend 1</a><br>
+                <span class="color: grey;">31k Posts</span><br><br>
+                <a href="">#Trend 2</a><br>
+                <span class="color: grey;">33k Posts</span><br><br>
+                <a href="">#Trend 3</a><br>
+                <span class="color: grey;">34k Posts</span><br><br>
             </div>
     </div>
 </div>
