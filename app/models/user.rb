@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
         has_many :posts, dependent: :destory #this code right here makes sure that if a user deletes their account, all post associated with the account get deleted as well
-        has_many :active_relationship, class_name: "Realtionship", foreign_key: "follower_id", dependent: :destroy
+        has_many :active_relationship, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
         has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
         
         
