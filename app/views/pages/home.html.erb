@@ -13,7 +13,7 @@
                             <h6 style="color: #55acee; font-size: 200%">16</h6>
                         </div>
                         <div class="col-sm-6" style="font-size: 80%; opacity: .7;">Followers<br>
-                            <h6 style="color: #55acee; opacity: .7; font-size: 200%">15</h6>
+                            <h6 style="color: #55acee; opacity: .7; font-size: 200%"><%= current_user.followers.count %></h6>
                         </div>
                         
                     </div>
@@ -50,7 +50,7 @@
                  <p class="post-links">
                 <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-retweet g-links" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-heart g-links g-links-heart" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
                 <a href="">View conversation</a>
                 </p>

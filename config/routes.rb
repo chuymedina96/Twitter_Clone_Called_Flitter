@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   get 'fdf/uewewfewhnfdfudsufds'
 
   devise_for :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :posts
   #Define Routes for pages
 root 'pages#index'
