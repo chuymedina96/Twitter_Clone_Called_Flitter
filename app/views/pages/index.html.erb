@@ -60,7 +60,7 @@
     </div>
     <div class="col-sm-6">
         <div class="log-in panel">
-            <center><p>Log in</p>
+            <center><p style="font-size:20px;">Log in</p>
                <%= form_for(:user, :url => session_path(:user)) do |f| %>
                   <%= f.text_field :email %>
                   <%= f.password_field :password %><br>
@@ -70,7 +70,7 @@
             </center>
         </div>
         <div class="sign-up panel">
-             <center><p>Sign up</p>
+             <center><p style="font-size:20px;">Sign up</p>
                  <%= form_for(:user, url: registration_path(:user)) do |f| %>
                         <%= f.label :username %><br />
                         <%= f.text_field :username, autofocus: true %><br>
