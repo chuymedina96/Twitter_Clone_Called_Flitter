@@ -61,6 +61,21 @@
     <div class="col-sm-6">
         <div class="log-in panel">
             <center><p>Log in</p>
+                <%= form_for(:user, url: registration_path(:user)) do |f| %>
+                        <%= f.label :username %><br />
+                        <%= f.text_field :username, autofocus: true %>
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email %>
+                      <%= f.label :password %>
+                      <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characters minimum)</em>
+                      <% end %><br />
+                      <%= f.password_field :password, autocomplete: "off" %> 
+                      <%= f.label :password_confirmation %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "off" %> 
+                      <%= f.submit "Sign up" %>
+              <% end %>
+            </center>
         </div>
         <div class="sign-up panel">
              <center><p>Sign up</p>
