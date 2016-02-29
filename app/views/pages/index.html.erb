@@ -38,7 +38,7 @@
             float: right;
             margin-top: 7.5%;
             width:300px;
-            height: 200px;
+            height: 150px;
         }
         .sign-up {
             float: right;
@@ -64,7 +64,7 @@
                <%= form_for(:user, :url => session_path(:user)) do |f| %>
                   <%= f.text_field :email %>
                   <%= f.password_field :password %><br>
-                  <%= f.submit 'Sign in' %><br>
+                  <%= f.submit 'Sign in', class: "btn btn-primary" %><br>
                   <%= link_to "Forgot your password?", new_password_path(:user) %>
                 <% end %>
             </center>
@@ -83,7 +83,7 @@
                       <%= f.password_field :password, autocomplete: "off" %> 
                       <%= f.label :password_confirmation %><br />
                       <%= f.password_field :password_confirmation, autocomplete: "off" %><br>
-                      <%= f.submit "Sign up" %>
+                      <%= f.submit "Sign up", class: "btn btn-primary" %>
               <% end %>
             </center>
         </div>
