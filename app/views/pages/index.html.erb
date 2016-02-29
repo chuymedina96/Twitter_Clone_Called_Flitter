@@ -38,12 +38,12 @@
             float: right;
             margin-top: 7.5%;
             width:300px;
-            height: 100px;
+            height: 200px;
         }
         .sign-up {
             float: right;
             width:300px;
-            height: 220px;
+            height: 240px;
             color: black;
         }
     </style>
@@ -73,7 +73,7 @@
              <center><p>Sign up</p>
                  <%= form_for(:user, url: registration_path(:user)) do |f| %>
                         <%= f.label :username %><br />
-                        <%= f.text_field :username, autofocus: true %>
+                        <%= f.text_field :username, autofocus: true %><br>
                         <%= f.label :email %><br />
                         <%= f.email_field :email %>
                       <%= f.label :password %>
@@ -82,7 +82,7 @@
                       <% end %><br />
                       <%= f.password_field :password, autocomplete: "off" %> 
                       <%= f.label :password_confirmation %><br />
-                      <%= f.password_field :password_confirmation, autocomplete: "off" %> 
+                      <%= f.password_field :password_confirmation, autocomplete: "off" %><br>
                       <%= f.submit "Sign up" %>
               <% end %>
             </center>
