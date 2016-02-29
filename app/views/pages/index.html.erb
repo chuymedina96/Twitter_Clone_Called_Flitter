@@ -66,8 +66,8 @@
              <center><p>Sign up</p>
                 <%= form_for(:user, :url => session_path(:user)) do |f| %>
                   <%= f.text_field :email %>
-                  <%= f.password_field :password %>
-                  <%= f.submit 'Sign in' %>
+                  <%= f.password_field :password %><br>
+                  <%= f.submit 'Sign in' %><br>
                   <%= link_to "Forgot your password?", new_password_path(:user) %>
                 <% end %>
             </center>
