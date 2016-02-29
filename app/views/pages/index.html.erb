@@ -63,7 +63,7 @@
             <center><p>Log in</p>
         </div>
         <div class="sign-up panel">
-             <center><p>Sign up</p></center>
+             <center><p>Sign up</p>
                 <%= form_for(:user, :url => session_path(:user)) do |f| %>
                   <%= f.text_field :email %>
                   <%= f.password_field :password %>
