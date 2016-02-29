@@ -6,7 +6,7 @@
         body {
             background: linear-gradient(#C4E88A, transparent 90%),
               linear-gradient(0deg, #7A7A47, transparent),
-              #ffa949 url('/bg.jpg') no-repeat center center fixed;  /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
+              url('/bg.jpg') no-repeat center center fixed;  /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -63,7 +63,40 @@
             <center><p>Log in</p></center>
         </div>
         <div class="sign-up panel">
-             <center><p>Sign up</p></center>
+             <center><p>Sign up</p>
+                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus:true, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <center style="padding-top: 10px;"><%= f.submit "Sign up", class: "btn btn-primary" %></center>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+             </center>
         </div>
     </div>
     <div class="col-sm-12">
