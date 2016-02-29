@@ -6,7 +6,7 @@
         body {
             background: linear-gradient(rgba(0,0,0, .7), transparent 90%),
               linear-gradient(0deg, #7A7A47, transparent),
-              url('/bg.jpg') no-repeat center center fixed;  /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
+              url('/bg.jpg') no-repeat center center fixed;  /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does or did*/
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -64,6 +64,14 @@
         </div>
         <div class="sign-up panel">
              <center><p>Sign up</p></center>
+                <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                  <%= f.text_field :email %>
+                  <%= f.password_field :password %>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+                  <%= f.submit 'Sign in' %>
+                  <%= link_to "Forgot your password?", new_password_path(:user) %>
+                <% end %>
         </div>
     </div>
     <div class="col-sm-12">
