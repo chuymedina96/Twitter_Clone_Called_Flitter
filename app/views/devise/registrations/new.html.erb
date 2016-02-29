@@ -1,32 +1,16 @@
 <div class="container">
-<h2 class="sign-up">Sign up</h2>
-<div class="center-everything">
-   <style>
-        body {
-            background: 
-            linear-gradient(
-            rgba(0,0,0, 0.7),
-            rgba(0,0,0, 0.7)
-            ),
-            url("/bg.jpg") no-repeat center center fixed; /*This sets a background image for the landing page. Eventually want to play a slideshow of images similar to what twitter does*/
-            -webkit-background-size: cover;
-            -moz-background-szie: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            
-        }
-    </style>
+<center><h2 class="sign-up">Sign up</h2></center>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus:true %>
+    <%= f.text_field :username, autofocus:true, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -34,16 +18,16 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <center style="padding-top: 10px;"><%= f.submit "Sign up", class: "btn btn-primary" %></center>
   </div>
 <% end %>
 

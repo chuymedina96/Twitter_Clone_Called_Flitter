@@ -10,7 +10,7 @@ class PostsController < ApplicationController
                 if (@post.save)
                     f.html { redirect_to "", notice: "Post created succesfully!" }
                 else
-                    f.html { redirect_to "", notice: "Error: Post Not Saved" }
+                    f.html { redirect_to "", notice: "Error: Post Not Saved. Post cannot exceed 150 characters" }
                 end
             end
         end

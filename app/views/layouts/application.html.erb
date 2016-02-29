@@ -22,10 +22,10 @@
              </div>
              <div class="col-sm-6" style="margin-top: 5px;">
                 <div class="col-sm-2">POSTS<br>
-                     <h6 style="color: #55acee; font-size: 150%">16</h6>
+                     <h6 style="color: #55acee; font-size: 150%"><%= current_user.posts.count %></h6>
                 </div>
                 <div class="col-sm-2">Followers<br>
-                     <h6 style="color: #55acee; font-size: 150%">15</h6>
+                     <h6 style="color: #55acee; font-size: 150%"><%= current_user.followers.count %></h6>
                 </div>
                 <% if user_signed_in? %>
                     <div class="col-sm-8" style="text-align: right; margin-top: 5px;"><a href="/users/edit"><li type="button" class="btn btn-default" style="color: grey; opacity: .8; font-weight: bold;">Edit Profile</li></a></div>

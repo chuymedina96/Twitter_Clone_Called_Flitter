@@ -31,14 +31,14 @@
                   <img src="/menbae.jpg" class="rounded-img" height="50px" width="50px"></img>
               </div>
               <div class="col-sm-11">
-                  <p class="post-title"><span class="post-owner"><%= User.find(@p.user.id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></p>
+                  <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user.id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></p>
                   <p class="post-content"><%= @p.content %></p>
               </div>
               <div class="col-sm-12">
                  <p class="post-links">
                 <span class="glyphicon glyphicon-comment g-links g-links-comment" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-retweet g-links g-links-retweet" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-heart g-links g-links-heart" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-heart g-links heart" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
                 <a href="">View conversation</a>
                 </p>

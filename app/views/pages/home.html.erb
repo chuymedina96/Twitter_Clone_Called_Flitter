@@ -10,7 +10,7 @@
                     <div class="col-sm-10"><h4 style="text-align: center;"><%= current_user.username %></h4></div>
                     <div class="col-sm-12" style="margin-top: 10px;">
                         <div class="col-sm-6" style="font-size: 80%; opacity: .7;">Tweets<br>
-                            <h6 style="color: #55acee; font-size: 200%">16</h6>
+                            <h6 style="color: #55acee; font-size: 200%"><%= current_user.posts.count %></h6>
                         </div>
                         <div class="col-sm-6" style="font-size: 80%; opacity: .7;">Followers<br>
                             <h6 style="color: #55acee; opacity: .7; font-size: 200%"><%= current_user.followers.count %></h6>
@@ -43,14 +43,14 @@
                   <img src="/menbae.jpg" class="rounded-img" height="50px" width="50px"></img>
               </div>
               <div class="col-sm-11">
-                  <p class="post-title"><span class="post-owner"><%= User.find(@p.user.id).username %></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></p>
+                  <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user.id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></p>
                   <p class="post-content"><%= @p.content %></p>
               </div>
               <div class="col-sm-12">
                  <p class="post-links">
                 <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-retweet g-links" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-heart g-links g-links-heart" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-heart g-links heart" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
                 <a href="">View conversation</a>
                 </p>
