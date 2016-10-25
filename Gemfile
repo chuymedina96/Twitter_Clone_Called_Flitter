@@ -8,7 +8,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 #Changed database
-gem 'pg'
+gem 'sqlite3'
 #Heroku pre-req
 gem 'rails_12factor', group: :production # do not use locally, only on heroku
 # Use SCSS for stylesheets
